@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B604F5F23FE9F2C0033F935 /* PencilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B604F5E23FE9F2C0033F935 /* PencilViewController.swift */; };
 		407A97D223FE9B4900FCC932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97D123FE9B4900FCC932 /* AppDelegate.swift */; };
 		407A97D423FE9B4900FCC932 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97D323FE9B4900FCC932 /* SceneDelegate.swift */; };
 		407A97D623FE9B4900FCC932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97D523FE9B4900FCC932 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B604F5E23FE9F2C0033F935 /* PencilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilViewController.swift; sourceTree = "<group>"; };
 		407A97CE23FE9B4900FCC932 /* StreetARtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetARtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A97D123FE9B4900FCC932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407A97D323FE9B4900FCC932 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				407A97D123FE9B4900FCC932 /* AppDelegate.swift */,
 				407A97D323FE9B4900FCC932 /* SceneDelegate.swift */,
 				407A97D523FE9B4900FCC932 /* ViewController.swift */,
+				2B604F5E23FE9F2C0033F935 /* PencilViewController.swift */,
 				407A97D723FE9B4900FCC932 /* Main.storyboard */,
 				407A97DA23FE9B4A00FCC932 /* Assets.xcassets */,
 				407A97DC23FE9B4A00FCC932 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				407A97D623FE9B4900FCC932 /* ViewController.swift in Sources */,
 				407A97D223FE9B4900FCC932 /* AppDelegate.swift in Sources */,
 				407A97D423FE9B4900FCC932 /* SceneDelegate.swift in Sources */,
+				2B604F5F23FE9F2C0033F935 /* PencilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
