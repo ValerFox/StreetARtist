@@ -32,11 +32,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-1t-ZFN">
-                                <rect key="frame" x="813" y="497" width="130" height="109"/>
+                                <rect key="frame" x="252" y="352" width="130" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="New Project"/>
                                 <connections>
                                     <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-eh-6rz">
+                                <rect key="frame" x="668" y="691" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <segue destination="5QR-4b-aBH" kind="show" id="ga7-IH-wgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-34-Zi2">
+                                <rect key="frame" x="1007" y="391" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Graffiti"/>
+                                <connections>
+                                    <segue destination="WlX-me-xIm" kind="show" id="pyb-oC-e6A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,6 +65,22 @@
             </objects>
             <point key="canvasLocation" x="10.980966325036603" y="144.7265625"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="IZf-b9-ibg">
+            <objects>
+                <viewController id="5QR-4b-aBH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="io7-tf-FWR">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="At5-xN-QkZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HvS-Jl-3Qg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeH-nS-ysD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="1050"/>
+        </scene>
         <!--Camera View Controller-->
         <scene sceneID="rG8-4I-Ah8">
             <objects>
@@ -58,11 +90,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
-                                <rect key="frame" x="1136" y="428" width="46" height="30"/>
+                                <rect key="frame" x="195" y="374" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="takePhotoButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="n0Q-je-weO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
+                                <rect key="frame" x="1073" y="374" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
+                                <rect key="frame" x="664" y="702" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Blank"/>
+                                <connections>
+                                    <segue destination="P4c-Ux-tFo" kind="show" id="wvo-jb-mPM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,6 +123,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-hW-ERL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="723" y="145"/>
+        </scene>
+        <!--My Graffiti View Controller-->
+        <scene sceneID="Ftp-rM-lZX">
+            <objects>
+                <viewController id="WlX-me-xIm" customClass="MyGraffitiViewController" customModule="StreetARtist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0D-ST-i4h">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="g6E-fZ-IeP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qjh-YD-VMf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50F-1h-kMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="1050"/>
         </scene>
         <!--Pencil View Controller-->
         <scene sceneID="Tb8-9x-XbN">
@@ -96,4 +157,7 @@
             <point key="canvasLocation" x="1440.7027818448023" y="144.7265625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wvo-jb-mPM"/>
+    </inferredMetricsTieBreakers>
 </document>
