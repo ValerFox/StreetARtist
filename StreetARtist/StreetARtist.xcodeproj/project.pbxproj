@@ -15,6 +15,7 @@
 		407A97DE23FE9B4A00FCC932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A97DC23FE9B4A00FCC932 /* LaunchScreen.storyboard */; };
 		407A97E623FEA74D00FCC932 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E523FEA74D00FCC932 /* CameraViewController.swift */; };
 		407A97E823FEC82900FCC932 /* MyGraffitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E723FEC82900FCC932 /* MyGraffitiViewController.swift */; };
+		407A97EA23FECDFF00FCC932 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E923FECDFF00FCC932 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		407A97DF23FE9B4A00FCC932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407A97E523FEA74D00FCC932 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		407A97E723FEC82900FCC932 /* MyGraffitiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGraffitiViewController.swift; sourceTree = "<group>"; };
+		407A97E923FECDFF00FCC932 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				2B604F5E23FE9F2C0033F935 /* PencilViewController.swift */,
 				407A97E523FEA74D00FCC932 /* CameraViewController.swift */,
 				407A97D723FE9B4900FCC932 /* Main.storyboard */,
+				407A97E923FECDFF00FCC932 /* CollectionViewCell.swift */,
 				407A97E723FEC82900FCC932 /* MyGraffitiViewController.swift */,
 				407A97DA23FE9B4A00FCC932 /* Assets.xcassets */,
 				407A97DC23FE9B4A00FCC932 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				407A97E623FEA74D00FCC932 /* CameraViewController.swift in Sources */,
 				407A97D223FE9B4900FCC932 /* AppDelegate.swift in Sources */,
+				407A97EA23FECDFF00FCC932 /* CollectionViewCell.swift in Sources */,
 				407A97D423FE9B4900FCC932 /* SceneDelegate.swift in Sources */,
 				407A97E823FEC82900FCC932 /* MyGraffitiViewController.swift in Sources */,
 				2B604F5F23FE9F2C0033F935 /* PencilViewController.swift in Sources */,
