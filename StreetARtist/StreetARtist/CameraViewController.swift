@@ -10,7 +10,7 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    static let wallImage = UIImageView()
+    static let wallImage = UIImageView()           //Background
     @IBOutlet weak var photoButton: UIButton!
     
     override func viewDidLoad() {
@@ -42,6 +42,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
 //-----------------------------------------------------------
     
+//------------------------------SendBackgroundToNextView-------------------------------
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
             if (cameraFlag) {
@@ -58,5 +59,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
             self.navigationController!.pushViewController(pencilViewController, animated: true)
         }
+//-------------------------------------------------------------------------------------
 
 }

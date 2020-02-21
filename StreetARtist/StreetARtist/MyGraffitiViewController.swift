@@ -9,10 +9,15 @@
 import UIKit
 
 class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var galleryView: UICollectionView!
+    @IBOutlet weak var galleryView: UICollectionView! //GalleryCollection
+//    @IBOutlet weak var storedView: UIImageView!
+    @IBOutlet weak var previewView: UIImageView!      //ImageShowed
+//    @IBAction func tapAction(_ sender: Any) {
+//    }
     
     var graffiti: [UIImage] = [UIImage(named: "soccer-field")!, UIImage(named: "soccer-field")!]
     
+    //-----------------------------------CollectionView---------------------------
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return graffiti.count
     }
@@ -30,9 +35,21 @@ class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UI
 //    {
 //       return CGSize(width: 150.0, height: 150.0)
 //    }
+    //---------------------------------------------------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+//        .isUserInteractionEnabled = true
+//        CollectionViewCell.cellImage.addGestureRecognizer(tapGestureRecognizer)
+//        }
+//
+//        @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+//        {
+//            let tappedImage = tapGestureRecognizer.view as! UIImageView
+//
+//            previewView.image = storedView.image
+        }
     }
 
-}

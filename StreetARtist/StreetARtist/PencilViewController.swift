@@ -16,25 +16,31 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //------------------CanvasLoad-------------------------
         canvasView.translatesAutoresizingMaskIntoConstraints = false
         canvasView.backgroundColor = .clear
         canvasView.isOpaque = false
-        
+        //-----------------------------------------------------
         CameraViewController.wallImage.frame = CGRect(x: 50, y: 50, width: 1000, height: 1000)
         
+        //------------------Subviews-----------------------
         view.addSubview(CameraViewController.wallImage)
         view.addSubview(canvasView)
 //        view.addSubview(confrimButton)
 //        view.addSubview(cancelButton)
+        //-----------------------------------------------------
         
+        //------------------CanvasConstraints--------------------------
         NSLayoutConstraint.activate([
             canvasView.topAnchor.constraint(equalTo: view.topAnchor),
             canvasView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             canvasView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             canvasView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
+        //-----------------------------------------------------
     }
     
+    //-------------------ToolPickerLoad------------------------
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -46,6 +52,17 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         toolPicker.addObserver(canvasView)
         canvasView.becomeFirstResponder()
     }
+    //----------------------------------------------------------
+    
+    //------------------ClearBackground-------------------------
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            CameraViewController.wallImage.image = nil
+        }
+    }
+    //---------------------------------------------------------
     
 //    @IBAction func saveAction(_ sender: Any) {
 //        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
