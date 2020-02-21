@@ -32,28 +32,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-1t-ZFN">
-                                <rect key="frame" x="252" y="352" width="130" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Project"/>
-                                <connections>
-                                    <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-eh-6rz">
-                                <rect key="frame" x="668" y="691" width="30" height="30"/>
+                                <rect key="frame" x="651" y="684" width="80" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Info"/>
                                 <connections>
                                     <segue destination="5QR-4b-aBH" kind="show" id="ga7-IH-wgM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-34-Zi2">
-                                <rect key="frame" x="1007" y="391" width="72" height="30"/>
+                                <rect key="frame" x="938" y="385" width="222" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="My Graffiti"/>
                                 <connections>
                                     <segue destination="WlX-me-xIm" kind="show" id="pyb-oC-e6A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-1t-ZFN">
+                                <rect key="frame" x="194" y="352" width="308" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="New Project"/>
+                                <connections>
+                                    <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,24 +94,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
-                                <rect key="frame" x="195" y="374" width="54" height="30"/>
+                                <rect key="frame" x="150" y="367" width="168" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="takePhotoButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="n0Q-je-weO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
-                                <rect key="frame" x="1073" y="374" width="48" height="30"/>
+                                <rect key="frame" x="1039" y="367" width="149" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Gallery"/>
                                 <connections>
                                     <action selector="takeGalleryButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="1EN-Mk-0NO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
-                                <rect key="frame" x="664" y="702" width="38" height="30"/>
+                                <rect key="frame" x="630" y="696" width="118" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Blank"/>
                                 <connections>
                                     <segue destination="P4c-Ux-tFo" kind="show" id="wvo-jb-mPM"/>
