@@ -9,8 +9,9 @@
 import UIKit
 
 class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
-    var graffiti: [UIImage] = [UIImage(named: "StreetAppIcon.png")!]
+    @IBOutlet weak var galleryView: UICollectionView!
+    
+    var graffiti: [UIImage] = [UIImage(named: "soccer-field")!, UIImage(named: "soccer-field")!]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return graffiti.count
@@ -20,15 +21,15 @@ class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UI
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! CollectionViewCell
         
-        cell.cellImage.image = graffiti[indexPath.item]
+        cell.cellImage.image = graffiti[indexPath.row]
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-       return CGSize(width: 150.0, height: 150.0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+//    {
+//       return CGSize(width: 150.0, height: 150.0)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
