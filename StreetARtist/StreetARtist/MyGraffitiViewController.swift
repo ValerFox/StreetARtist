@@ -8,16 +8,29 @@
 
 import UIKit
 
-class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MyGraffitiViewController: UIViewController {
+    
     @IBOutlet weak var galleryView: UICollectionView! //GalleryCollection
-//    @IBOutlet weak var storedView: UIImageView!
-    @IBOutlet weak var previewView: UIImageView!      //ImageShowed
-//    @IBAction func tapAction(_ sender: Any) {
-//    }
+    @IBOutlet weak var previewView: UIImageView! //ImageShowed
     
-    var graffiti: [UIImage] = [UIImage(named: "soccer-field")!, UIImage(named: "soccer-field")!]
+    var graffiti = [
+        UIImage(named: "a")!,
+        UIImage(named: "b")!,
+        UIImage(named: "c")!,
+        UIImage(named: "d")!,
+        UIImage(named: "e")!
+    ]
     
-    //-----------------------------------CollectionView---------------------------
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        previewView.image = graffiti[0]
+    }
+}
+
+// MARK:- collectionView extesion
+extension MyGraffitiViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return graffiti.count
     }
@@ -31,25 +44,13 @@ class MyGraffitiViewController: UIViewController, UICollectionViewDataSource, UI
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-//    {
-//       return CGSize(width: 150.0, height: 150.0)
-//    }
-    //---------------------------------------------------------------------------------
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//
-//            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-//        .isUserInteractionEnabled = true
-//        CollectionViewCell.cellImage.addGestureRecognizer(tapGestureRecognizer)
-//        }
-//
-//        @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-//        {
-//            let tappedImage = tapGestureRecognizer.view as! UIImageView
-//
-//            previewView.image = storedView.image
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        previewView.image = graffiti[indexPath.item]
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: 150.0, height: 150.0)
+    }
+}

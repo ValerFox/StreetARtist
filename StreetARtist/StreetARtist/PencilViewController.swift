@@ -10,7 +10,7 @@ import PencilKit
 
 class PencilViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-//    @IBOutlet weak var confirmButton: UIButton!
+    //    @IBOutlet weak var confirmButton: UIButton!
     let canvasView = PKCanvasView(frame: .zero)
     
     override func viewDidLoad() {
@@ -26,8 +26,8 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         //------------------Subviews-----------------------
         view.addSubview(CameraViewController.wallImage)
         view.addSubview(canvasView)
-//        view.addSubview(confrimButton)
-//        view.addSubview(cancelButton)
+        //        view.addSubview(confrimButton)
+        //        view.addSubview(cancelButton)
         //-----------------------------------------------------
         
         //------------------CanvasConstraints--------------------------
@@ -57,21 +57,21 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     //------------------ClearBackground-------------------------
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         if self.isMovingFromParent {
             CameraViewController.wallImage.image = nil
         }
     }
     //---------------------------------------------------------
     
-//    @IBAction func saveAction(_ sender: Any) {
-//        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-//        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
-//
-//        let saveAlert = UIAlertController(title: "SAVING STATE", message: "Your drawing has been saving in your gallery!", preferredStyle: .alert)
-//
-//        saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//
-//        self.present(saveAlert, animated: true)
-//    }
+    //    @IBAction func saveAction(_ sender: Any) {
+    //        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
+    //        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+    //
+    //        let saveAlert = UIAlertController(title: "SAVING STATE", message: "Your drawing has been saving in your gallery!", preferredStyle: .alert)
+    //
+    //        saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    //
+    //        self.present(saveAlert, animated: true)
+    //    }
 }
