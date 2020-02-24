@@ -23,6 +23,10 @@ class MyGraffitiViewController: UIViewController {
         
         previewView.image = graffiti[0]
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 // MARK:- collectionView extesion

@@ -16,7 +16,6 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
         
         //------------------CanvasLoad-------------------------
         canvasView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +36,9 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
             canvasView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     //-------------------ToolPickerLoad------------------------
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +51,8 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         toolPicker.setVisible(true, forFirstResponder: canvasView)
         toolPicker.addObserver(canvasView)
         canvasView.becomeFirstResponder()
+        
+        //canvasView.tool = PKInkingTool(.pencil, width: 10)
     }
     
     //-----------------------Exit-X-------------------------------------------

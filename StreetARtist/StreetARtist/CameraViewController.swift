@@ -18,6 +18,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     
     //MARK:- Camera
     @IBAction func takePhotoButton(_ sender: UIButton) {
