@@ -50,27 +50,12 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         canvasView.becomeFirstResponder()
     }
     
-    //------------------ClearBackground-------------------------
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        if isMovingFromParent {
-            CameraViewController.wallImage.image = nil
-        }
-    }
-    
-    @IBAction func saveAction(_ sender: UIButton) {
-        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-        //saveToPhotoAlbum(imageToSave: image)
-        AppData.shared.graffiti.append(image)
-        
-    }
-    
+    //-----------------------Exit-X-------------------------------------------
     @IBAction func closeAction(_ sender: UIButton) {
         
         let alert = UIAlertController(title: "Attention", message: "The artwork is not saved. You will lose it.", preferredStyle: .alert)
         
-        let ok = UIAlertAction(title: "Exit anyway", style: .destructive) { (_) in
+        let ok = UIAlertAction(title: "Exit", style: .destructive) { (_) in
             self.dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)
         }
@@ -82,7 +67,23 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         present(alert, animated: true)
     }
+    //------------------ClearBackground-------------------------
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if isMovingFromParent {
+            CameraViewController.wallImage.image = nil
+        }
+    }
     
+    //---------------------Save------------------------------
+    @IBAction func saveAction(_ sender: UIButton) {
+        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
+        //saveToPhotoAlbum(imageToSave: image)
+        AppData.shared.graffiti.append(image)
+        
+    }
+    //----------------------Save-to-Album-------------------------
     func saveToPhotoAlbum(imageToSave: UIImage) {
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, self, nil, nil)
