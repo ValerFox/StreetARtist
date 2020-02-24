@@ -16,13 +16,14 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
         //------------------CanvasLoad-------------------------
         canvasView.translatesAutoresizingMaskIntoConstraints = false
         canvasView.backgroundColor = .clear
         canvasView.isOpaque = false
         
-        CameraViewController.wallImage.frame = CGRect(x: 50, y: 50, width: 1000, height: 1000)
+        CameraViewController.wallImage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         //------------------Subviews-----------------------
         view.insertSubview(CameraViewController.wallImage, at: 0)
