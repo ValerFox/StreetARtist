@@ -72,6 +72,7 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let ok = UIAlertAction(title: "Exit anyway", style: .destructive) { (_) in
             self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
