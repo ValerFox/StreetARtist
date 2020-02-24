@@ -10,15 +10,14 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    static let wallImage = UIImageView() //Background
     @IBOutlet weak var photoButton: UIButton!
+    
+    static let wallImage = UIImageView() //Background
+    var cameraFlag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
-    var cameraFlag = false
     
     //MARK:- Camera
     @IBAction func takePhotoButton(_ sender: UIButton) {
@@ -55,8 +54,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 CameraViewController.wallImage.image = takenPhoto}
             dismiss(animated: true, completion: nil)
         }
-        let pencilViewController = self.storyboard?.instantiateViewController(withIdentifier: "pencilViewController") as! PencilViewController
+        let pencilViewController = storyboard?.instantiateViewController(withIdentifier: "pencilViewController") as! PencilViewController
         
-        navigationController!.pushViewController(pencilViewController, animated: true)
+        navigationController?.pushViewController(pencilViewController, animated: true)
     }
 }

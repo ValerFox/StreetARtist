@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Blank"/>
                                 <connections>
-                                    <segue destination="P4c-Ux-tFo" kind="show" id="wvo-jb-mPM"/>
+                                    <segue destination="P4c-Ux-tFo" kind="presentation" modalPresentationStyle="fullScreen" id="wvo-jb-mPM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,36 +144,34 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-cy-iSa">
                                 <rect key="frame" x="20" y="102" width="400" height="922"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cm4-5w-xQD">
-                                    <size key="itemSize" width="529" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="HjU-ha-A44"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cm4-5w-xQD">
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellID" id="3HI-3l-2aS" customClass="CollectionViewCell" customModule="StreetARtist" customModuleProvider="target">
-                                        <rect key="frame" x="-64.5" y="0.0" width="529" height="255"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="374-pj-oRr">
-                                            <rect key="frame" x="0.0" y="0.0" width="529" height="255"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A8C-Sq-HqQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HOs-Fn-mRL">
-                                                    <rect key="frame" x="20" y="20" width="489" height="235"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="493" id="47v-jn-43x"/>
-                                                        <constraint firstAttribute="height" constant="236" id="zG4-Bd-pEb"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="5.5" y="6" width="139" height="138"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="leading" secondItem="374-pj-oRr" secondAttribute="leading" constant="20" symbolic="YES" id="Gk7-Q6-1fc"/>
-                                                <constraint firstAttribute="bottom" secondItem="HOs-Fn-mRL" secondAttribute="bottom" id="LgA-cn-pgC"/>
-                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="top" secondItem="374-pj-oRr" secondAttribute="top" constant="20" symbolic="YES" id="SJU-Tv-TeY"/>
-                                                <constraint firstAttribute="trailing" secondItem="HOs-Fn-mRL" secondAttribute="trailing" constant="20" symbolic="YES" id="p5y-iL-4Ky"/>
+                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="centerX" secondItem="A8C-Sq-HqQ" secondAttribute="centerX" id="cbF-1y-ccO"/>
+                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="width" secondItem="A8C-Sq-HqQ" secondAttribute="width" multiplier="0.924386" id="shm-l7-Xps"/>
+                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="centerY" secondItem="A8C-Sq-HqQ" secondAttribute="centerY" id="tFG-Se-v6q"/>
+                                                <constraint firstItem="HOs-Fn-mRL" firstAttribute="height" secondItem="A8C-Sq-HqQ" secondAttribute="height" multiplier="0.921569" id="vLi-Nq-e3G"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="529" height="255"/>
                                         <connections>
                                             <outlet property="cellImage" destination="HOs-Fn-mRL" id="I0d-Mj-ZHa"/>
                                         </connections>
@@ -186,6 +184,7 @@
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-sM-4VK">
                                 <rect key="frame" x="520" y="102" width="765" height="842"/>
+                                <color key="backgroundColor" red="0.49972641470000001" green="0.87190669779999996" blue="0.74116951230000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -195,7 +194,6 @@
                             <constraint firstItem="pPc-cy-iSa" firstAttribute="top" secondItem="g6E-fZ-IeP" secondAttribute="top" id="8Ct-d6-8iy"/>
                             <constraint firstAttribute="bottom" secondItem="pPc-cy-iSa" secondAttribute="bottom" id="8yy-o3-sdm"/>
                             <constraint firstItem="WgD-sM-4VK" firstAttribute="leading" secondItem="pPc-cy-iSa" secondAttribute="trailing" constant="100" id="HJO-ve-ENa"/>
-                            <constraint firstItem="WgD-sM-4VK" firstAttribute="leading" secondItem="g6E-fZ-IeP" secondAttribute="leading" constant="520" id="fFX-Hz-mTA"/>
                             <constraint firstItem="g6E-fZ-IeP" firstAttribute="bottom" secondItem="WgD-sM-4VK" secondAttribute="bottom" constant="60" id="jP2-Y0-CfM"/>
                             <constraint firstItem="g6E-fZ-IeP" firstAttribute="trailing" secondItem="WgD-sM-4VK" secondAttribute="trailing" constant="81" id="sIf-C9-2EL"/>
                         </constraints>
@@ -218,7 +216,39 @@
                     <view key="view" contentMode="scaleToFill" id="TPL-HL-Gsz">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-e7-lG7">
+                                <rect key="frame" x="1306" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="OtR-BD-b14"/>
+                                    <constraint firstAttribute="width" secondItem="pJ7-e7-lG7" secondAttribute="height" multiplier="1:1" id="vA1-Fw-T9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="GNo-1W-PIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-6i-caN">
+                                <rect key="frame" x="1242" y="25" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="c7d-iO-HRR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YxL-G6-EMa" firstAttribute="trailing" secondItem="pJ7-e7-lG7" secondAttribute="trailing" constant="20" id="DxI-Sh-KBe"/>
+                            <constraint firstItem="LT0-6i-caN" firstAttribute="height" secondItem="pJ7-e7-lG7" secondAttribute="height" multiplier="0.75" id="LML-Rv-Ake"/>
+                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="leading" secondItem="LT0-6i-caN" secondAttribute="trailing" constant="30" id="dg2-4l-T32"/>
+                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="top" secondItem="YxL-G6-EMa" secondAttribute="top" constant="20" id="eao-7a-qmT"/>
+                            <constraint firstItem="LT0-6i-caN" firstAttribute="centerY" secondItem="pJ7-e7-lG7" secondAttribute="centerY" id="mHd-JS-2Gw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YxL-G6-EMa"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Gr-81-Uk7"/>
@@ -228,4 +258,7 @@
             <point key="canvasLocation" x="1440.7027818448023" y="144.7265625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

@@ -13,13 +13,10 @@ class MyGraffitiViewController: UIViewController {
     @IBOutlet weak var galleryView: UICollectionView! //GalleryCollection
     @IBOutlet weak var previewView: UIImageView! //ImageShowed
     
-    var graffiti = [
-        UIImage(named: "a")!,
-        UIImage(named: "b")!,
-        UIImage(named: "c")!,
-        UIImage(named: "d")!,
-        UIImage(named: "e")!
-    ]
+    /// variabile computata
+    var graffiti: [UIImage] {
+        return AppData.shared.graffiti
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +38,8 @@ extension MyGraffitiViewController: UICollectionViewDelegateFlowLayout, UICollec
         
         cell.cellImage.image = graffiti[indexPath.row]
         
+        cell.cellImage.contentMode = .scaleAspectFit
+        
         return cell
     }
     
@@ -51,6 +50,6 @@ extension MyGraffitiViewController: UICollectionViewDelegateFlowLayout, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: 150.0, height: 150.0)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.width)
     }
 }

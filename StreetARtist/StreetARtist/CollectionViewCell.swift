@@ -9,6 +9,8 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var cellImage: UIImageView!
+    
 //    override var isUserInteractionEnabled: Bool = true
 }
