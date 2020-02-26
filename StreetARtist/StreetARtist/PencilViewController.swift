@@ -10,7 +10,8 @@ import PencilKit
 
 class PencilViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-//    @IBOutlet weak var confirmButton: UIButton!
+    //    @IBOutlet weak var confirmButton: UIButton!
+   
     
     let canvasView = PKCanvasView(frame: .zero)
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMt-8J-fJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMt-8J-fJh">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,7 +61,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="X3V-s0-QNp"/>
+                        <viewLayoutGuide key="safeArea" id="5LX-lX-sJQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="SX7-j1-Fiq"/>
                 </viewController>
@@ -77,7 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="At5-xN-QkZ"/>
+                        <viewLayoutGuide key="safeArea" id="c6i-oJ-Whm"/>
                     </view>
                     <navigationItem key="navigationItem" id="HvS-Jl-3Qg"/>
                 </viewController>
@@ -122,7 +122,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="2oM-Lh-WHt"/>
+                        <viewLayoutGuide key="safeArea" id="pV7-HZ-XwD"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vjw-RK-lRf"/>
                     <connections>
@@ -189,15 +189,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pPc-cy-iSa" firstAttribute="leading" secondItem="g6E-fZ-IeP" secondAttribute="leading" constant="20" id="4d6-Hc-9bK"/>
-                            <constraint firstItem="WgD-sM-4VK" firstAttribute="top" secondItem="g6E-fZ-IeP" secondAttribute="top" id="5Sr-a5-wIo"/>
-                            <constraint firstItem="pPc-cy-iSa" firstAttribute="top" secondItem="g6E-fZ-IeP" secondAttribute="top" id="8Ct-d6-8iy"/>
+                            <constraint firstItem="pPc-cy-iSa" firstAttribute="leading" secondItem="sev-ZJ-Pl4" secondAttribute="leading" constant="20" id="4d6-Hc-9bK"/>
+                            <constraint firstItem="WgD-sM-4VK" firstAttribute="top" secondItem="sev-ZJ-Pl4" secondAttribute="top" id="5Sr-a5-wIo"/>
+                            <constraint firstItem="pPc-cy-iSa" firstAttribute="top" secondItem="sev-ZJ-Pl4" secondAttribute="top" id="8Ct-d6-8iy"/>
                             <constraint firstAttribute="bottom" secondItem="pPc-cy-iSa" secondAttribute="bottom" id="8yy-o3-sdm"/>
                             <constraint firstItem="WgD-sM-4VK" firstAttribute="leading" secondItem="pPc-cy-iSa" secondAttribute="trailing" constant="100" id="HJO-ve-ENa"/>
-                            <constraint firstItem="g6E-fZ-IeP" firstAttribute="bottom" secondItem="WgD-sM-4VK" secondAttribute="bottom" constant="60" id="jP2-Y0-CfM"/>
-                            <constraint firstItem="g6E-fZ-IeP" firstAttribute="trailing" secondItem="WgD-sM-4VK" secondAttribute="trailing" constant="81" id="sIf-C9-2EL"/>
+                            <constraint firstItem="sev-ZJ-Pl4" firstAttribute="bottom" secondItem="WgD-sM-4VK" secondAttribute="bottom" constant="60" id="jP2-Y0-CfM"/>
+                            <constraint firstItem="sev-ZJ-Pl4" firstAttribute="trailing" secondItem="WgD-sM-4VK" secondAttribute="trailing" constant="81" id="sIf-C9-2EL"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="g6E-fZ-IeP"/>
+                        <viewLayoutGuide key="safeArea" id="sev-ZJ-Pl4"/>
                     </view>
                     <navigationItem key="navigationItem" id="qjh-YD-VMf"/>
                     <connections>
@@ -240,22 +240,46 @@
                                     <action selector="saveAction:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="c7d-iO-HRR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHf-XN-RZh">
+                                <rect key="frame" x="1181" y="245" width="157" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zr2-ff-Qgo" kind="presentation" modalPresentationStyle="fullScreen" id="M1M-bt-4SB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YxL-G6-EMa" firstAttribute="trailing" secondItem="pJ7-e7-lG7" secondAttribute="trailing" constant="20" id="DxI-Sh-KBe"/>
+                            <constraint firstItem="qri-V5-zDI" firstAttribute="trailing" secondItem="pJ7-e7-lG7" secondAttribute="trailing" constant="20" id="DxI-Sh-KBe"/>
                             <constraint firstItem="LT0-6i-caN" firstAttribute="height" secondItem="pJ7-e7-lG7" secondAttribute="height" multiplier="0.75" id="LML-Rv-Ake"/>
                             <constraint firstItem="pJ7-e7-lG7" firstAttribute="leading" secondItem="LT0-6i-caN" secondAttribute="trailing" constant="30" id="dg2-4l-T32"/>
-                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="top" secondItem="YxL-G6-EMa" secondAttribute="top" constant="20" id="eao-7a-qmT"/>
+                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="top" secondItem="qri-V5-zDI" secondAttribute="top" constant="20" id="eao-7a-qmT"/>
                             <constraint firstItem="LT0-6i-caN" firstAttribute="centerY" secondItem="pJ7-e7-lG7" secondAttribute="centerY" id="mHd-JS-2Gw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="YxL-G6-EMa"/>
+                        <viewLayoutGuide key="safeArea" id="qri-V5-zDI"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Gr-81-Uk7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xk-fD-j45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440.7027818448023" y="144.7265625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dI0-GG-bnQ">
+            <objects>
+                <viewController id="zr2-ff-Qgo" customClass="ARViewController" customModule="StreetARtist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TTi-bH-bzh">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vm7-zD-nAL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tgA-KS-FSM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKc-BZ-8xa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192" y="145"/>
         </scene>
     </scenes>
     <resources>
