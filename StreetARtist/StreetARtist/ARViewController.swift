@@ -11,7 +11,8 @@ import ARKit
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
  
-  
+    @IBOutlet weak var exitButton: UIButton!
+    
   let arView: ARSCNView = {
     let view = ARSCNView()
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +29,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-    view.addSubview(arView)
+    view.insertSubview(arView, at: 0)
+    view.insertSubview(exitButton, at: 1)
     
     arView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     arView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -44,6 +46,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     arView.delegate = self
   }
+    
+    @IBAction func exitAction(_ sender: UIButton) {
+            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+    }
    
     func degreesToRadians(x: Int) -> Double {
         return Double(x) * .pi/180

@@ -83,21 +83,19 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     //---------------------Save------------------------------
-    @IBAction func saveAction(_ sender: UIButton) {
-        let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-        //saveToPhotoAlbum(imageToSave: image)
+        @IBAction func save(_ sender: Any) {
+        
+        let fileManager = FileManager.default
+        
+        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("image.png")
+            let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
+    print(paths)
+            let imageData = image.pngData();
+        fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         AppData.shared.graffiti.append(image)
         
-    }
-    //----------------------Save-to-Album-------------------------
-    func saveToPhotoAlbum(imageToSave: UIImage) {
-        
-        UIImageWriteToSavedPhotosAlbum(imageToSave, self, nil, nil)
-        
-        let saveAlert = UIAlertController(title: "SAVING STATE", message: "Your drawing has been saving in your gallery!", preferredStyle: .alert)
-
-        saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-
-        present(saveAlert, animated: true)
+            let saveAlert = UIAlertController(title: "Saved!", message: "Your sketch has been saved", preferredStyle: .alert)
+            saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(saveAlert, animated: true)
     }
 }
