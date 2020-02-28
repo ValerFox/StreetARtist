@@ -59,7 +59,7 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     //-----------------------Exit-X-------------------------------------------
     @IBAction func closeAction(_ sender: UIButton) {
         
-        let alert = UIAlertController(title: "Attention", message: "The artwork is not saved. You will lose it.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Confirm exit?", message: "You will lose all unsaved progress.", preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "Exit", style: .destructive) { (_) in
             self.dismiss(animated: true, completion: nil)

@@ -14,11 +14,11 @@ class AppData {
     
     init() {}
     
-    var graffiti = [
-        UIImage(named: "a")!,
-        UIImage(named: "b")!,
-        UIImage(named: "c")!,
-        UIImage(named: "d")!,
-        UIImage(named: "e")!
-    ]
+    var graffiti = [UIImage
+//        UIImage(named: "a")!,
+//        UIImage(named: "b")!,
+//        UIImage(named: "c")!,
+//        UIImage(named: "d")!,
+//        UIImage(named: "e")!
+        ]()
 }

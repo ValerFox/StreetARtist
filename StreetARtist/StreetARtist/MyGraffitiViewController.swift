@@ -21,7 +21,7 @@ class MyGraffitiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        previewView.image = graffiti[0]
+        //previewView.image = graffiti[0]
     }
     
     override func viewWillAppear(_ animated: Bool) {
