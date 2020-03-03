@@ -85,17 +85,35 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     //---------------------Save------------------------------
         @IBAction func save(_ sender: Any) {
         
-        let fileManager = FileManager.default
+//        let fileManager = FileManager.default
         
-        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("image.png")
+//        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("image.png")
             let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-    print(paths)
-            let imageData = image.pngData();
-        fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
-        AppData.shared.graffiti.append(image)
+//    print(paths)
+//            let imageData = image.pngData();
+//        fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
+            
+//        AppData.shared.graffiti.append(image)
         
             let saveAlert = UIAlertController(title: "Saved!", message: "Your sketch has been saved", preferredStyle: .alert)
             saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(saveAlert, animated: true)
+            
+        let imgname: String = String(NSDate().timeIntervalSince1970)
+        
+            
+            func saveImage(name:String){
+        guard let documentDirectoryPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+            let imgPath = documentDirectoryPath.appendingPathComponent("\(imgname).png")
+        do {
+            try image.pngData()?.write(to: imgPath, options: .atomic)
+            print("saved ", imgname)
+        } catch {
+            print(error.localizedDescription)
+        }
+            }
+            saveImage(name: imgname)
     }
 }

@@ -22,7 +22,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
   let configuration = ARWorldTrackingConfiguration()
 
   var graffiti: [UIImage] {
-        return AppData.shared.graffiti
+        return AppData.shared.graffitio
     }
     
   override func viewDidLoad() {
@@ -61,7 +61,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     node.name = "wall"
     node.eulerAngles = SCNVector3(degreesToRadians(x: 270), 0, 0)
     node.geometry = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
-    node.geometry?.firstMaterial?.diffuse.contents = graffiti[5]
+    node.geometry?.firstMaterial?.diffuse.contents = graffiti[0]
     node.geometry?.firstMaterial?.isDoubleSided = true
     node.position = SCNVector3(anchor.center.x, anchor.center.y, anchor.center.z)
     return node

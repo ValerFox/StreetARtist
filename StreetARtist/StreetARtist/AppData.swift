@@ -14,7 +14,7 @@ class AppData {
     
     init() {}
     
-    var graffiti = [UIImage
+    var graffitio = [UIImage
 //        UIImage(named: "a")!,
 //        UIImage(named: "b")!,
 //        UIImage(named: "c")!,
