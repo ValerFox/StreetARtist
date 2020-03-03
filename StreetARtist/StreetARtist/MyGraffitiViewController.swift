@@ -12,7 +12,7 @@ class MyGraffitiViewController: UIViewController {
     
     @IBOutlet weak var galleryView: UICollectionView! //GalleryCollection
     @IBOutlet weak var previewView: UIImageView! //ImageShowed
-
+    
     var graffitinumber: Int = 0
     var graffiti: [UIImage] = []
     
@@ -35,7 +35,6 @@ class MyGraffitiViewController: UIViewController {
         } catch {
             // failed to read directory – bad permissions, perhaps?
         }
-        //previewView.image = graffiti[0]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +64,7 @@ extension MyGraffitiViewController: UICollectionViewDelegateFlowLayout, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         previewView.image = graffiti[indexPath.item]
+        AppData.shared.graffititemp = graffiti[indexPath.item]
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

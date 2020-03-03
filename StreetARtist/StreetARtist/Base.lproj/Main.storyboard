@@ -219,7 +219,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sev-ZJ-Pl4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qjh-YD-VMf"/>
+                    <navigationItem key="navigationItem" id="qjh-YD-VMf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arkit" catalog="system" id="nCn-Z9-srD">
+                            <connections>
+                                <segue destination="zr2-ff-Qgo" kind="presentation" modalPresentationStyle="fullScreen" id="zfI-Jy-OIQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="galleryView" destination="pPc-cy-iSa" id="dTa-dq-AJP"/>
                         <outlet property="previewView" destination="WgD-sM-4VK" id="qOl-DC-Thk"/>
@@ -266,6 +272,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="AR preview"/>
                                 <connections>
+                                    <action selector="ARtemp:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="sIU-QP-tM8"/>
                                     <segue destination="zr2-ff-Qgo" kind="presentation" modalPresentationStyle="fullScreen" id="M1M-bt-4SB"/>
                                 </connections>
                             </button>
@@ -300,7 +307,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQE-Oh-SsT">
+                            <arskView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-dg-qmf">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arskView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZn-G2-yhU">
                                 <rect key="frame" x="20" y="20" width="58" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -310,7 +321,7 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="exitAction:" destination="zr2-ff-Qgo" eventType="touchUpInside" id="IcE-Y6-8MM"/>
+                                    <action selector="exitAction:" destination="zr2-ff-Qgo" eventType="touchUpInside" id="mSB-fI-EFg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,7 +330,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="tgA-KS-FSM"/>
                     <connections>
-                        <outlet property="exitButton" destination="XQE-Oh-SsT" id="4bn-zM-jHa"/>
+                        <outlet property="exitButton" destination="fZn-G2-yhU" id="xOB-FY-f5k"/>
+                        <outlet property="sceneView" destination="rzr-dg-qmf" id="DlN-ZO-6nF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKc-BZ-8xa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,8 +345,12 @@
         <image name="MyProjects" width="620" height="610"/>
         <image name="NewSketch" width="654" height="642"/>
         <image name="TakeAPicture" width="620" height="610"/>
+        <image name="arkit" catalog="system" width="64" height="64"/>
         <image name="iPadGallery" width="620" height="610"/>
         <image name="nuovoSfondo" width="2290" height="1674"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zfI-Jy-OIQ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,8 @@
 		407A97E623FEA74D00FCC932 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E523FEA74D00FCC932 /* CameraViewController.swift */; };
 		407A97E823FEC82900FCC932 /* MyGraffitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E723FEC82900FCC932 /* MyGraffitiViewController.swift */; };
 		407A97EA23FECDFF00FCC932 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A97E923FECDFF00FCC932 /* CollectionViewCell.swift */; };
+		40DD3E07240E9B370018B760 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DD3E06240E9B370018B760 /* Scene.swift */; };
+		40DD3E09240E9B400018B760 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 40DD3E08240E9B400018B760 /* Scene.sks */; };
 		DBC76CAA2406B81D0090AA20 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC76CA92406B81D0090AA20 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		407A97E523FEA74D00FCC932 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		407A97E723FEC82900FCC932 /* MyGraffitiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGraffitiViewController.swift; sourceTree = "<group>"; };
 		407A97E923FECDFF00FCC932 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		40DD3E06240E9B370018B760 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		40DD3E08240E9B400018B760 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		DBC76CA92406B81D0090AA20 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 		407A97D023FE9B4900FCC932 /* StreetARtist */ = {
 			isa = PBXGroup;
 			children = (
+				40DD3E08240E9B400018B760 /* Scene.sks */,
+				40DD3E06240E9B370018B760 /* Scene.swift */,
 				407A97D123FE9B4900FCC932 /* AppDelegate.swift */,
 				407A97D323FE9B4900FCC932 /* SceneDelegate.swift */,
 				2B8E58702403321200F6F4D6 /* AppData.swift */,
@@ -148,6 +154,7 @@
 			files = (
 				407A97DE23FE9B4A00FCC932 /* LaunchScreen.storyboard in Resources */,
 				407A97DB23FE9B4A00FCC932 /* Assets.xcassets in Resources */,
+				40DD3E09240E9B400018B760 /* Scene.sks in Resources */,
 				407A97D923FE9B4900FCC932 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +176,7 @@
 				2B604F5F23FE9F2C0033F935 /* PencilViewController.swift in Sources */,
 				2B8E58712403321200F6F4D6 /* AppData.swift in Sources */,
 				DBC76CAA2406B81D0090AA20 /* ARViewController.swift in Sources */,
+				40DD3E07240E9B370018B760 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5XQKHJJDJ;
+				DEVELOPMENT_TEAM = MZ8CYB3843;
 				INFOPLIST_FILE = StreetARtist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5XQKHJJDJ;
+				DEVELOPMENT_TEAM = MZ8CYB3843;
 				INFOPLIST_FILE = StreetARtist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

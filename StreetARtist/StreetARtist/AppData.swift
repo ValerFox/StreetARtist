@@ -12,13 +12,15 @@ class AppData {
     
     static let shared = AppData()
     
-    init() {}
     
-    var graffitio = [UIImage
-//        UIImage(named: "a")!,
-//        UIImage(named: "b")!,
-//        UIImage(named: "c")!,
-//        UIImage(named: "d")!,
-//        UIImage(named: "e")!
-        ]()
+    init() {}
+    var graffititemp = UIImage()
+//
+//    var graffititemp = [UIImage
+////        UIImage(named: "a")!,
+////        UIImage(named: "b")!,
+////        UIImage(named: "c")!,
+////        UIImage(named: "d")!,
+////        UIImage(named: "e")!
+//        ]()
 }

@@ -15,6 +15,10 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     let canvasView = PKCanvasView(frame: .zero)
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -115,5 +119,8 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
             }
             saveImage(name: imgname)
+    }
+    @IBAction func ARtemp(_ sender: Any) {
+        AppData.shared.graffititemp = (canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0))
     }
 }
