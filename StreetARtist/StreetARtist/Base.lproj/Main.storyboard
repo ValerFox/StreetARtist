@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P4c-Ux-tFo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMt-8J-fJh">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,32 +32,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuovoSfondo" translatesAutoresizingMaskIntoConstraints="NO" id="r2l-Ld-aSc">
-                                <rect key="frame" x="-137" y="-75" width="1503" height="1099"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SFONDINO" translatesAutoresizingMaskIntoConstraints="NO" id="r2l-Ld-aSc">
+                                <rect key="frame" x="-154" y="-62" width="1836" height="1149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-34-Zi2">
-                                <rect key="frame" x="846" y="226" width="466" height="369"/>
+                                <rect key="frame" x="783" y="115" width="466" height="390"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="MyProjects"/>
+                                <state key="normal" image="PROJETTK"/>
                                 <connections>
                                     <segue destination="WlX-me-xIm" kind="show" id="pyb-oC-e6A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-1t-ZFN">
-                                <rect key="frame" x="20" y="226" width="466" height="369"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <state key="normal" image="NewSketch"/>
-                                <connections>
-                                    <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-eh-6rz">
-                                <rect key="frame" x="415" y="603" width="466" height="369"/>
+                                <rect key="frame" x="880" y="513" width="466" height="401"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Info"/>
+                                <state key="normal" image="INFO2"/>
                                 <connections>
                                     <segue destination="5QR-4b-aBH" kind="show" id="ga7-IH-wgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-1t-ZFN">
+                                <rect key="frame" x="0.0" y="238" width="580" height="595"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <state key="normal" image="NUOVOSK"/>
+                                <connections>
+                                    <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,14 +106,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuovoSfondo" translatesAutoresizingMaskIntoConstraints="NO" id="49a-ON-nIG">
-                                <rect key="frame" x="-122" y="-68" width="1488" height="1092"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SFONDINO" translatesAutoresizingMaskIntoConstraints="NO" id="49a-ON-nIG">
+                                <rect key="frame" x="-154" y="-62" width="1836" height="1149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
-                                <rect key="frame" x="20" y="226" width="466" height="369"/>
+                                <rect key="frame" x="0.0" y="479" width="544" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="TakeAPicture">
+                                <state key="normal" image="TAKEIT">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -121,9 +121,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
-                                <rect key="frame" x="846" y="226" width="466" height="369"/>
+                                <rect key="frame" x="900" y="437" width="466" height="434"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="iPadGallery">
+                                <state key="normal" image="IPAD">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -131,9 +131,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
-                                <rect key="frame" x="415" y="603" width="466" height="369"/>
+                                <rect key="frame" x="404" y="50" width="558" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="BlankBoard">
+                                <state key="normal" image="BBLANK">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -383,14 +383,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlankBoard" width="620" height="610"/>
-        <image name="Info" width="654" height="642"/>
-        <image name="MyProjects" width="620" height="610"/>
-        <image name="NewSketch" width="654" height="642"/>
-        <image name="TakeAPicture" width="620" height="610"/>
+        <image name="BBLANK" width="1068" height="958"/>
+        <image name="INFO2" width="886" height="1098"/>
+        <image name="IPAD" width="868" height="1076"/>
+        <image name="NUOVOSK" width="1332" height="1330"/>
+        <image name="PROJETTK" width="998" height="958"/>
+        <image name="SFONDINO" width="3360" height="1876"/>
+        <image name="TAKEIT" width="1068" height="958"/>
         <image name="arkit" catalog="system" width="64" height="64"/>
-        <image name="iPadGallery" width="620" height="610"/>
-        <image name="nuovoSfondo" width="2290" height="1674"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>

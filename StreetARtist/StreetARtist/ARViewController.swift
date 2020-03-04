@@ -80,15 +80,19 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         guard let nostraImmagine = nostraImmagine else { return }
         
         switch gesture.state {
-        case .changed:
-            nostraImmagine.size.width += gesture.scale*4
-            nostraImmagine.size.height += gesture.scale*4
+        case .began:
+            nostraImmagine.size.width += gesture.scale
+            nostraImmagine.size.height += gesture.scale
+            
+            
             
             print(gesture.scale)
             
+            
+    
             // let action = SKAction.scale(by: 9, duration: 0.1)
             // nostraImmagine.run(action)
-            
+        
         default:break
         }
     }
