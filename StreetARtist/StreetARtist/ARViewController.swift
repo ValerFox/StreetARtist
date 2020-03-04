@@ -30,8 +30,8 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and node count
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
+        sceneView.showsFPS = false
+        sceneView.showsNodeCount = false
         
         // Load the SKScene from 'Scene.sks'
         if let scene = SKScene(fileNamed: "Scene") {
@@ -42,9 +42,12 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        resetTracking()
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        configuration.automaticImageScaleEstimationEnabled = true
+        configuration.planeDetection = []
+        configuration.automaticImageScaleEstimationEnabled = false
+        configuration.isAutoFocusEnabled = true
         
         // Run the view's session
         sceneView.session.run(configuration)
@@ -64,12 +67,17 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     // MARK: - ARSKViewDelegate
     
+    func resetTracking() {
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
         if nostraImmagine != nil { return nil }
         let texture = SKTexture(image: AppData.shared.graffititemp)
         let nostraImmagineNode = SKSpriteNode(texture: texture)
-
+        
         nostraImmagine = nostraImmagineNode
 
         return nostraImmagineNode
@@ -80,19 +88,19 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         guard let nostraImmagine = nostraImmagine else { return }
         
         switch gesture.state {
-        case .began:
+        case .changed:
+            if (gesture.scale>=1) {
             nostraImmagine.size.width += gesture.scale
-            nostraImmagine.size.height += gesture.scale
-            
-            
+                nostraImmagine.size.height += gesture.scale }
+            else {
+            nostraImmagine.size.width -= gesture.scale*4
+                nostraImmagine.size.height -= gesture.scale*4 }
             
             print(gesture.scale)
             
-            
-    
             // let action = SKAction.scale(by: 9, duration: 0.1)
             // nostraImmagine.run(action)
-        
+            
         default:break
         }
     }
@@ -185,6 +193,10 @@ class ARViewController: UIViewController, ARSKViewDelegate {
 //  }
 //
 //  func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+//    guard let anchorPlane = anchor as? ARPlaneAnchor else { return }
+//    print("Plane anchor removed with extent:", anchorPlane.extent)
+//    removeNode(named: "wall")
+//  }
 //    guard let anchorPlane = anchor as? ARPlaneAnchor else { return }
 //    print("Plane anchor removed with extent:", anchorPlane.extent)
 //    removeNode(named: "wall")
