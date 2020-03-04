@@ -36,16 +36,8 @@
                                 <rect key="frame" x="-154" y="-62" width="1836" height="1149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-34-Zi2">
-                                <rect key="frame" x="783" y="115" width="466" height="390"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="PROJETTK"/>
-                                <connections>
-                                    <segue destination="WlX-me-xIm" kind="show" id="pyb-oC-e6A"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-eh-6rz">
-                                <rect key="frame" x="880" y="513" width="466" height="401"/>
+                                <rect key="frame" x="865" y="473" width="481" height="441"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="INFO2"/>
                                 <connections>
@@ -58,6 +50,14 @@
                                 <state key="normal" image="NUOVOSK"/>
                                 <connections>
                                     <segue destination="5a0-uq-xoP" kind="show" id="lqf-qF-cG2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-34-Zi2">
+                                <rect key="frame" x="708" y="75" width="532" height="417"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="PRRSKKK"/>
+                                <connections>
+                                    <segue destination="WlX-me-xIm" kind="show" id="pyb-oC-e6A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -387,7 +387,7 @@
         <image name="INFO2" width="886" height="1098"/>
         <image name="IPAD" width="868" height="1076"/>
         <image name="NUOVOSK" width="1332" height="1330"/>
-        <image name="PROJETTK" width="998" height="958"/>
+        <image name="PRRSKKK" width="1066" height="890"/>
         <image name="SFONDINO" width="3360" height="1876"/>
         <image name="TAKEIT" width="1068" height="958"/>
         <image name="arkit" catalog="system" width="64" height="64"/>
