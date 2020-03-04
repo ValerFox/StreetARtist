@@ -11,20 +11,20 @@ import ARKit
 class ARViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet var sceneView: ARSKView!
-    
     @IBOutlet weak var exitButton: UIButton!
     
-    @IBAction func exitAction(_ sender: UIButton) {
-            self.dismiss(animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
-    }
+    var nostraImmagine: SKSpriteNode?
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    //MARK:- ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchGesture(_:)))
+        sceneView.addGestureRecognizer(pinchGesture)
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -44,48 +44,68 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
+        configuration.automaticImageScaleEstimationEnabled = true
+        
         // Run the view's session
         sceneView.session.run(configuration)
-        
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    //MARK:- Actions
+    @IBAction func exitAction(_ sender: UIButton) {
+        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - ARSKViewDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
+        if nostraImmagine != nil { return nil }
         let texture = SKTexture(image: AppData.shared.graffititemp)
         let nostraImmagineNode = SKSpriteNode(texture: texture)
-        
+
+        nostraImmagine = nostraImmagineNode
+
         return nostraImmagineNode
+    }
+    
+    @objc func pinchGesture(_ gesture: UIPinchGestureRecognizer) {
+        
+        guard let nostraImmagine = nostraImmagine else { return }
+        
+        switch gesture.state {
+        case .changed:
+            nostraImmagine.size.width += gesture.scale*4
+            nostraImmagine.size.height += gesture.scale*4
+            
+            print(gesture.scale)
+            
+            // let action = SKAction.scale(by: 9, duration: 0.1)
+            // nostraImmagine.run(action)
+            
+        default:break
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
-        
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
         // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
     }
 }
 
-
-    
 //  let arView: ARSCNView = {
 //    let view = ARSCNView()
 //    view.translatesAutoresizingMaskIntoConstraints = false
@@ -110,16 +130,12 @@ class ARViewController: UIViewController, ARSKViewDelegate {
 //    arView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 //    arView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
 //
-//
-//
-//
 //    configuration.planeDetection = .vertical
 //    arView.session.run(configuration, options: [])
 //    arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
 //
 //    arView.delegate = self
 //  }
-//
 //
 //    func degreesToRadians(x: Int) -> Double {
 //        return Double(x) * .pi/180

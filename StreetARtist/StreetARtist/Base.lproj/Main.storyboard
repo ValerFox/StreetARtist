@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMt-8J-fJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P4c-Ux-tFo">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -243,24 +243,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-e7-lG7">
-                                <rect key="frame" x="20" y="20" width="65" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="OtR-BD-b14"/>
-                                    <constraint firstAttribute="width" secondItem="pJ7-e7-lG7" secondAttribute="height" multiplier="1:1" constant="2" id="vA1-Fw-T9S"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" weight="bold">
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="closeAction:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="GNo-1W-PIM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-6i-caN">
-                                <rect key="frame" x="1242" y="20" width="96" height="63"/>
+                                <rect key="frame" x="1242" y="32" width="56" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -268,7 +252,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHf-XN-RZh">
-                                <rect key="frame" x="1108" y="20" width="126" height="63"/>
+                                <rect key="frame" x="1108" y="32" width="126" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="AR preview"/>
                                 <connections>
@@ -276,20 +260,35 @@
                                     <segue destination="zr2-ff-Qgo" kind="presentation" modalPresentationStyle="fullScreen" id="M1M-bt-4SB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3I-It-n2n">
+                                <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="A0i-KV-qgV"/>
+                                    <constraint firstAttribute="height" constant="64" id="eAt-xf-fN0"/>
+                                </constraints>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="black"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="P4c-Ux-tFo" eventType="touchUpInside" id="9KM-rm-HPe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="OHf-XN-RZh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pJ7-e7-lG7" secondAttribute="trailing" constant="8" symbolic="YES" id="CUF-hm-cE8"/>
-                            <constraint firstItem="qri-V5-zDI" firstAttribute="trailing" secondItem="pJ7-e7-lG7" secondAttribute="trailing" constant="1281" id="DxI-Sh-KBe"/>
-                            <constraint firstItem="LT0-6i-caN" firstAttribute="height" secondItem="pJ7-e7-lG7" secondAttribute="height" multiplier="0.75" constant="15.75" id="LML-Rv-Ake"/>
+                            <constraint firstItem="m3I-It-n2n" firstAttribute="top" secondItem="qri-V5-zDI" secondAttribute="top" constant="32" id="2Fz-pb-nJQ"/>
+                            <constraint firstItem="m3I-It-n2n" firstAttribute="leading" secondItem="qri-V5-zDI" secondAttribute="leading" constant="32" id="EFw-KD-fH0"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="top" secondItem="LT0-6i-caN" secondAttribute="top" id="M3e-Gw-lvf"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="firstBaseline" secondItem="LT0-6i-caN" secondAttribute="firstBaseline" id="O8e-M3-UGH"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="baseline" secondItem="LT0-6i-caN" secondAttribute="baseline" id="Ork-qC-VfE"/>
                             <constraint firstAttribute="trailing" secondItem="OHf-XN-RZh" secondAttribute="trailing" constant="132" id="Xud-XW-qIw"/>
-                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="leading" secondItem="LT0-6i-caN" secondAttribute="trailing" constant="-1318" id="dg2-4l-T32"/>
-                            <constraint firstItem="pJ7-e7-lG7" firstAttribute="top" secondItem="qri-V5-zDI" secondAttribute="top" constant="20" id="eao-7a-qmT"/>
+                            <constraint firstItem="OHf-XN-RZh" firstAttribute="top" secondItem="m3I-It-n2n" secondAttribute="top" id="YqE-f1-2V0"/>
                             <constraint firstItem="LT0-6i-caN" firstAttribute="leading" secondItem="OHf-XN-RZh" secondAttribute="trailing" constant="8" symbolic="YES" id="gaP-Sb-PlS"/>
-                            <constraint firstItem="LT0-6i-caN" firstAttribute="centerY" secondItem="pJ7-e7-lG7" secondAttribute="centerY" id="mHd-JS-2Gw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qri-V5-zDI"/>
                     </view>
@@ -311,26 +310,70 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arskView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZn-G2-yhU">
-                                <rect key="frame" x="20" y="20" width="58" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" weight="bold">
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="exitAction:" destination="zr2-ff-Qgo" eventType="touchUpInside" id="mSB-fI-EFg"/>
-                                </connections>
-                            </button>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFE-jF-7kb">
+                                <rect key="frame" x="24" y="24" width="65" height="65"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fTl-f0-Kd5">
+                                    <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-ex-OUe">
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zSK-bu-NF8">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGD-KL-JR1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="URX-Mw-g6o"/>
+                                                            <constraint firstAttribute="height" constant="65" id="q8q-KZ-aHA"/>
+                                                        </constraints>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="black"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="exitAction:" destination="zr2-ff-Qgo" eventType="touchUpInside" id="nkD-Wk-I3c"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yGD-KL-JR1" secondAttribute="width" id="00E-Z8-TmV"/>
+                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerY" secondItem="zSK-bu-NF8" secondAttribute="centerY" id="2vZ-1l-C6Q"/>
+                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerX" secondItem="zSK-bu-NF8" secondAttribute="centerX" id="8Ud-vk-2tH"/>
+                                                    <constraint firstAttribute="height" secondItem="yGD-KL-JR1" secondAttribute="height" id="rX7-MP-oKu"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="systemUltraThinMaterial"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="centerX" secondItem="CFE-jF-7kb" secondAttribute="centerXWithinMargins" id="D64-BA-LvY"/>
+                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="centerY" secondItem="CFE-jF-7kb" secondAttribute="centerYWithinMargins" id="XHG-60-N0b"/>
+                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="height" secondItem="CFE-jF-7kb" secondAttribute="height" id="dhU-1F-sUt"/>
+                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="width" secondItem="CFE-jF-7kb" secondAttribute="width" id="jAp-db-jUo"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterial"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CFE-jF-7kb" firstAttribute="top" secondItem="vm7-zD-nAL" secondAttribute="top" constant="24" id="aD1-4j-Pqy"/>
+                            <constraint firstItem="CFE-jF-7kb" firstAttribute="leading" secondItem="vm7-zD-nAL" secondAttribute="leading" constant="24" id="jVI-6k-M8t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vm7-zD-nAL"/>
                     </view>
                     <navigationItem key="navigationItem" id="tgA-KS-FSM"/>
                     <connections>
-                        <outlet property="exitButton" destination="fZn-G2-yhU" id="xOB-FY-f5k"/>
+                        <outlet property="exitButton" destination="yGD-KL-JR1" id="ylx-ct-0QP"/>
                         <outlet property="sceneView" destination="rzr-dg-qmf" id="DlN-ZO-6nF"/>
                     </connections>
                 </viewController>
@@ -351,6 +394,6 @@
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zfI-Jy-OIQ"/>
+        <segue reference="M1M-bt-4SB"/>
     </inferredMetricsTieBreakers>
 </document>
