@@ -10,9 +10,6 @@ import PencilKit
 
 class PencilViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    //    @IBOutlet weak var confirmButton: UIButton!
-   
-    
     let canvasView = PKCanvasView(frame: .zero)
     
     override var prefersStatusBarHidden: Bool {
@@ -89,15 +86,7 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
     //---------------------Save------------------------------
         @IBAction func save(_ sender: Any) {
         
-//        let fileManager = FileManager.default
-        
-//        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("image.png")
             let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-//    print(paths)
-//            let imageData = image.pngData();
-//        fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
-            
-//        AppData.shared.graffiti.append(image)
         
             let saveAlert = UIAlertController(title: "Saved!", message: "Your sketch has been saved", preferredStyle: .alert)
             saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -120,6 +109,8 @@ class PencilViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             saveImage(name: imgname)
     }
+    
+    //--------------------SendToAR----------------------------
     @IBAction func ARtemp(_ sender: Any) {
         AppData.shared.graffititemp = (canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0))
     }

@@ -15,12 +15,4 @@ class AppData {
     
     init() {}
     var graffititemp = UIImage()
-//
-//    var graffititemp = [UIImage
-////        UIImage(named: "a")!,
-////        UIImage(named: "b")!,
-////        UIImage(named: "c")!,
-////        UIImage(named: "d")!,
-////        UIImage(named: "e")!
-//        ]()
 }

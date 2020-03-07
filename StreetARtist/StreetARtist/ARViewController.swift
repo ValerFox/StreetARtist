@@ -83,6 +83,7 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         return nostraImmagineNode
     }
     
+    //-------------------Pinch-----------------------------------------
     @objc func pinchGesture(_ gesture: UIPinchGestureRecognizer) {
         
         guard let nostraImmagine = nostraImmagine else { return }

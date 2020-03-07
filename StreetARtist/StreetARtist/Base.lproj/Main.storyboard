@@ -141,9 +141,13 @@
                                     <constraint firstAttribute="width" secondItem="49a-ON-nIG" secondAttribute="height" multiplier="612:383" id="lXf-Iq-mQc"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
-                                <rect key="frame" x="0.0" y="479" width="544" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
+                                <rect key="frame" x="0.0" y="305" width="544" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UzD-G0-g1Z" secondAttribute="height" multiplier="272:207" id="3gG-yI-ZFZ"/>
+                                    <constraint firstAttribute="width" constant="544" id="gPZ-3C-QVc"/>
+                                    <constraint firstAttribute="height" constant="414" id="kn8-Ry-vNv"/>
+                                </constraints>
                                 <state key="normal" image="TAKEIT">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -151,19 +155,13 @@
                                     <action selector="takePhotoButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="n0Q-je-weO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
-                                <rect key="frame" x="900" y="437" width="466" height="434"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="IPAD">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="takeGalleryButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="1EN-Mk-0NO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
                                 <rect key="frame" x="404" y="50" width="558" height="421"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jzj-re-0cC" secondAttribute="height" multiplier="558:421" id="Apb-m3-86O"/>
+                                    <constraint firstAttribute="width" constant="558" id="go3-qX-QGN"/>
+                                    <constraint firstAttribute="height" constant="421" id="xCb-AZ-PWL"/>
+                                </constraints>
                                 <state key="normal" image="BBLANK">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -171,12 +169,32 @@
                                     <segue destination="P4c-Ux-tFo" kind="presentation" modalPresentationStyle="fullScreen" id="wvo-jb-mPM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
+                                <rect key="frame" x="900" y="285" width="466" height="434"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hll-Xt-IGD" secondAttribute="height" multiplier="233:217" id="aB1-GL-Y3L"/>
+                                    <constraint firstAttribute="height" constant="434" id="mkZ-2G-fYW"/>
+                                    <constraint firstAttribute="width" constant="466" id="nXn-Lk-nRG"/>
+                                </constraints>
+                                <state key="normal" image="IPAD">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeGalleryButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="1EN-Mk-0NO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hll-Xt-IGD" firstAttribute="trailing" secondItem="pV7-HZ-XwD" secondAttribute="trailing" id="3K7-6l-1gr"/>
                             <constraint firstItem="49a-ON-nIG" firstAttribute="top" secondItem="IOp-D9-t1Q" secondAttribute="top" constant="-62" id="5Ns-UR-F8i"/>
                             <constraint firstAttribute="bottom" secondItem="49a-ON-nIG" secondAttribute="bottom" constant="-63" id="AA5-qc-z52"/>
+                            <constraint firstItem="Jzj-re-0cC" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" id="HMQ-4b-CpA"/>
+                            <constraint firstItem="hll-Xt-IGD" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" constant="235" id="SMG-dH-JLG"/>
+                            <constraint firstItem="UzD-G0-g1Z" firstAttribute="top" secondItem="Jzj-re-0cC" secondAttribute="bottom" constant="-166" id="X7a-9M-0os"/>
+                            <constraint firstItem="Jzj-re-0cC" firstAttribute="centerX" secondItem="IOp-D9-t1Q" secondAttribute="centerX" id="bLF-bM-iFp"/>
                             <constraint firstItem="49a-ON-nIG" firstAttribute="leading" secondItem="IOp-D9-t1Q" secondAttribute="leading" constant="-154" id="kdC-XD-Rsr"/>
+                            <constraint firstItem="UzD-G0-g1Z" firstAttribute="leading" secondItem="pV7-HZ-XwD" secondAttribute="leading" id="qNm-tZ-4qC"/>
                             <constraint firstAttribute="trailing" secondItem="49a-ON-nIG" secondAttribute="trailing" constant="-316" id="wOd-md-AKe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pV7-HZ-XwD"/>
