@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-cy-iSa">
-                                <rect key="frame" x="20" y="50" width="400" height="974"/>
+                                <rect key="frame" x="20" y="50" width="400" height="954"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="HjU-ha-A44"/>
@@ -211,8 +211,9 @@
                         <constraints>
                             <constraint firstItem="pPc-cy-iSa" firstAttribute="leading" secondItem="sev-ZJ-Pl4" secondAttribute="leading" constant="20" id="4d6-Hc-9bK"/>
                             <constraint firstItem="WgD-sM-4VK" firstAttribute="top" secondItem="sev-ZJ-Pl4" secondAttribute="top" id="5Sr-a5-wIo"/>
+                            <constraint firstItem="WgD-sM-4VK" firstAttribute="bottom" secondItem="sev-ZJ-Pl4" secondAttribute="bottom" id="5jg-uf-SxV"/>
                             <constraint firstItem="pPc-cy-iSa" firstAttribute="top" secondItem="sev-ZJ-Pl4" secondAttribute="top" id="8Ct-d6-8iy"/>
-                            <constraint firstAttribute="bottom" secondItem="pPc-cy-iSa" secondAttribute="bottom" id="8yy-o3-sdm"/>
+                            <constraint firstAttribute="bottom" secondItem="pPc-cy-iSa" secondAttribute="bottom" constant="20" id="8yy-o3-sdm"/>
                             <constraint firstItem="WgD-sM-4VK" firstAttribute="leading" secondItem="pPc-cy-iSa" secondAttribute="trailing" constant="23" id="HJO-ve-ENa"/>
                             <constraint firstItem="sev-ZJ-Pl4" firstAttribute="bottom" secondItem="WgD-sM-4VK" secondAttribute="bottom" id="jP2-Y0-CfM"/>
                             <constraint firstItem="sev-ZJ-Pl4" firstAttribute="trailing" secondItem="WgD-sM-4VK" secondAttribute="trailing" constant="20" id="sIf-C9-2EL"/>
@@ -233,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50F-1h-kMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372.03513909224012" y="1050"/>
+            <point key="canvasLocation" x="-372.47437774524155" y="1050"/>
         </scene>
         <!--Pencil View Controller-->
         <scene sceneID="Tb8-9x-XbN">
@@ -286,9 +287,11 @@
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="top" secondItem="LT0-6i-caN" secondAttribute="top" id="M3e-Gw-lvf"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="firstBaseline" secondItem="LT0-6i-caN" secondAttribute="firstBaseline" id="O8e-M3-UGH"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="baseline" secondItem="LT0-6i-caN" secondAttribute="baseline" id="Ork-qC-VfE"/>
+                            <constraint firstItem="OHf-XN-RZh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m3I-It-n2n" secondAttribute="trailing" constant="8" symbolic="YES" id="TBt-uv-MqW"/>
                             <constraint firstAttribute="trailing" secondItem="OHf-XN-RZh" secondAttribute="trailing" constant="132" id="Xud-XW-qIw"/>
                             <constraint firstItem="OHf-XN-RZh" firstAttribute="top" secondItem="m3I-It-n2n" secondAttribute="top" id="YqE-f1-2V0"/>
-                            <constraint firstItem="LT0-6i-caN" firstAttribute="leading" secondItem="OHf-XN-RZh" secondAttribute="trailing" constant="8" symbolic="YES" id="gaP-Sb-PlS"/>
+                            <constraint firstItem="LT0-6i-caN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OHf-XN-RZh" secondAttribute="trailing" symbolic="YES" id="gaP-Sb-PlS"/>
+                            <constraint firstItem="qri-V5-zDI" firstAttribute="trailing" secondItem="LT0-6i-caN" secondAttribute="trailing" constant="68" id="yZh-tk-Blz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qri-V5-zDI"/>
                     </view>
@@ -306,18 +309,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arskView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-dg-qmf">
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-dg-qmf">
                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arskView>
-                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFE-jF-7kb">
-                                <rect key="frame" x="24" y="24" width="65" height="65"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fTl-f0-Kd5">
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFE-jF-7kb">
+                                <rect key="frame" x="20" y="20" width="65" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="fTl-f0-Kd5">
                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-ex-OUe">
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-ex-OUe">
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zSK-bu-NF8">
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,10 +342,10 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="yGD-KL-JR1" secondAttribute="width" id="00E-Z8-TmV"/>
-                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerY" secondItem="zSK-bu-NF8" secondAttribute="centerY" id="2vZ-1l-C6Q"/>
-                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerX" secondItem="zSK-bu-NF8" secondAttribute="centerX" id="8Ud-vk-2tH"/>
-                                                    <constraint firstAttribute="height" secondItem="yGD-KL-JR1" secondAttribute="height" id="rX7-MP-oKu"/>
+                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerY" secondItem="zSK-bu-NF8" secondAttribute="centerY" id="NIg-Lu-JM7"/>
+                                                    <constraint firstAttribute="height" secondItem="yGD-KL-JR1" secondAttribute="height" id="NpF-NT-r7j"/>
+                                                    <constraint firstAttribute="width" secondItem="yGD-KL-JR1" secondAttribute="width" id="ifS-x1-qf9"/>
+                                                    <constraint firstItem="yGD-KL-JR1" firstAttribute="centerX" secondItem="zSK-bu-NF8" secondAttribute="centerX" id="rd8-Mz-4FA"/>
                                                 </constraints>
                                             </view>
                                             <vibrancyEffect>
@@ -350,12 +354,6 @@
                                         </visualEffectView>
                                     </subviews>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="centerX" secondItem="CFE-jF-7kb" secondAttribute="centerXWithinMargins" id="D64-BA-LvY"/>
-                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="centerY" secondItem="CFE-jF-7kb" secondAttribute="centerYWithinMargins" id="XHG-60-N0b"/>
-                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="height" secondItem="CFE-jF-7kb" secondAttribute="height" id="dhU-1F-sUt"/>
-                                    <constraint firstItem="s6k-ex-OUe" firstAttribute="width" secondItem="CFE-jF-7kb" secondAttribute="width" id="jAp-db-jUo"/>
-                                </constraints>
                                 <blurEffect style="systemUltraThinMaterial"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -366,8 +364,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CFE-jF-7kb" firstAttribute="top" secondItem="vm7-zD-nAL" secondAttribute="top" constant="24" id="aD1-4j-Pqy"/>
-                            <constraint firstItem="CFE-jF-7kb" firstAttribute="leading" secondItem="vm7-zD-nAL" secondAttribute="leading" constant="24" id="jVI-6k-M8t"/>
+                            <constraint firstItem="rzr-dg-qmf" firstAttribute="leading" secondItem="vm7-zD-nAL" secondAttribute="leading" id="F4Y-0S-FfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="rzr-dg-qmf" secondAttribute="bottom" id="TAg-3W-4ZM"/>
+                            <constraint firstItem="rzr-dg-qmf" firstAttribute="trailing" secondItem="vm7-zD-nAL" secondAttribute="trailing" id="hf4-cl-4YM"/>
+                            <constraint firstItem="rzr-dg-qmf" firstAttribute="top" secondItem="vm7-zD-nAL" secondAttribute="top" id="vgd-ap-Fwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vm7-zD-nAL"/>
                     </view>
@@ -394,6 +394,6 @@
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M1M-bt-4SB"/>
+        <segue reference="zfI-Jy-OIQ"/>
     </inferredMetricsTieBreakers>
 </document>
