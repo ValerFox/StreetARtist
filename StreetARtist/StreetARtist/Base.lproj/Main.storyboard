@@ -88,31 +88,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SFONDINO" translatesAutoresizingMaskIntoConstraints="NO" id="49a-ON-nIG">
-                                <rect key="frame" x="-154" y="-62" width="1836" height="1149"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="49a-ON-nIG" secondAttribute="height" multiplier="612:383" id="lXf-Iq-mQc"/>
-                                </constraints>
+                                <rect key="frame" x="-267" y="-161" width="1900" height="1347"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
-                                <rect key="frame" x="0.0" y="305" width="544" height="414"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UzD-G0-g1Z" secondAttribute="height" multiplier="272:207" id="3gG-yI-ZFZ"/>
-                                    <constraint firstAttribute="width" constant="544" id="gPZ-3C-QVc"/>
-                                    <constraint firstAttribute="height" constant="414" id="kn8-Ry-vNv"/>
-                                </constraints>
-                                <state key="normal" image="TAKEIT">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhotoButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="n0Q-je-weO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-re-0cC">
-                                <rect key="frame" x="404" y="50" width="558" height="421"/>
+                                <rect key="frame" x="51" y="96" width="453" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Jzj-re-0cC" secondAttribute="height" multiplier="558:421" id="Apb-m3-86O"/>
-                                    <constraint firstAttribute="width" constant="558" id="go3-qX-QGN"/>
-                                    <constraint firstAttribute="height" constant="421" id="xCb-AZ-PWL"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="3Hu-53-B7W"/>
+                                    <constraint firstAttribute="width" secondItem="Jzj-re-0cC" secondAttribute="height" multiplier="266:235" id="qgZ-DQ-58f"/>
                                 </constraints>
                                 <state key="normal" image="BBLANK">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -122,11 +104,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Xt-IGD">
-                                <rect key="frame" x="900" y="285" width="466" height="434"/>
+                                <rect key="frame" x="754.5" y="26" width="373.5" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hll-Xt-IGD" secondAttribute="height" multiplier="233:217" id="aB1-GL-Y3L"/>
-                                    <constraint firstAttribute="height" constant="434" id="mkZ-2G-fYW"/>
-                                    <constraint firstAttribute="width" constant="466" id="nXn-Lk-nRG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="C8g-Nt-70P"/>
+                                    <constraint firstAttribute="width" secondItem="hll-Xt-IGD" secondAttribute="height" multiplier="211:226" id="GAC-0l-IBS"/>
                                 </constraints>
                                 <state key="normal" image="IPAD">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -135,19 +116,35 @@
                                     <action selector="takeGalleryButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="1EN-Mk-0NO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-G0-g1Z">
+                                <rect key="frame" x="905" y="510" width="461" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UzD-G0-g1Z" secondAttribute="height" multiplier="295:256" id="S6f-mE-X0T"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="dlA-Rk-SBY"/>
+                                </constraints>
+                                <state key="normal" image="TAKEIT">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoButton:" destination="5a0-uq-xoP" eventType="touchUpInside" id="n0Q-je-weO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hll-Xt-IGD" firstAttribute="trailing" secondItem="pV7-HZ-XwD" secondAttribute="trailing" id="3K7-6l-1gr"/>
-                            <constraint firstItem="49a-ON-nIG" firstAttribute="top" secondItem="IOp-D9-t1Q" secondAttribute="top" constant="-62" id="5Ns-UR-F8i"/>
-                            <constraint firstAttribute="bottom" secondItem="49a-ON-nIG" secondAttribute="bottom" constant="-63" id="AA5-qc-z52"/>
-                            <constraint firstItem="Jzj-re-0cC" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" id="HMQ-4b-CpA"/>
-                            <constraint firstItem="hll-Xt-IGD" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" constant="235" id="SMG-dH-JLG"/>
-                            <constraint firstItem="UzD-G0-g1Z" firstAttribute="top" secondItem="Jzj-re-0cC" secondAttribute="bottom" constant="-166" id="X7a-9M-0os"/>
-                            <constraint firstItem="Jzj-re-0cC" firstAttribute="centerX" secondItem="IOp-D9-t1Q" secondAttribute="centerX" id="bLF-bM-iFp"/>
-                            <constraint firstItem="49a-ON-nIG" firstAttribute="leading" secondItem="IOp-D9-t1Q" secondAttribute="leading" constant="-154" id="kdC-XD-Rsr"/>
-                            <constraint firstItem="UzD-G0-g1Z" firstAttribute="leading" secondItem="pV7-HZ-XwD" secondAttribute="leading" id="qNm-tZ-4qC"/>
-                            <constraint firstAttribute="trailing" secondItem="49a-ON-nIG" secondAttribute="trailing" constant="-316" id="wOd-md-AKe"/>
+                            <constraint firstItem="49a-ON-nIG" firstAttribute="top" secondItem="IOp-D9-t1Q" secondAttribute="top" constant="-161" id="5Ns-UR-F8i"/>
+                            <constraint firstAttribute="bottom" secondItem="49a-ON-nIG" secondAttribute="bottom" constant="-162" id="AA5-qc-z52"/>
+                            <constraint firstAttribute="bottom" secondItem="UzD-G0-g1Z" secondAttribute="bottom" constant="114" id="B9e-KM-Owc"/>
+                            <constraint firstItem="Jzj-re-0cC" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" constant="46" id="JQy-qt-Mys"/>
+                            <constraint firstItem="hll-Xt-IGD" firstAttribute="top" secondItem="pV7-HZ-XwD" secondAttribute="top" constant="-24" id="NFF-Mi-lNp" userLabel="Button.top = Safe Area.top"/>
+                            <constraint firstAttribute="trailing" secondItem="UzD-G0-g1Z" secondAttribute="trailing" id="a0b-01-ISj"/>
+                            <constraint firstItem="pV7-HZ-XwD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jzj-re-0cC" secondAttribute="bottom" constant="68" id="dDA-kh-IvK"/>
+                            <constraint firstItem="49a-ON-nIG" firstAttribute="leading" secondItem="IOp-D9-t1Q" secondAttribute="leading" constant="-267" id="kdC-XD-Rsr"/>
+                            <constraint firstItem="UzD-G0-g1Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IOp-D9-t1Q" secondAttribute="top" constant="44" id="kmg-5w-vmf"/>
+                            <constraint firstAttribute="trailing" secondItem="hll-Xt-IGD" secondAttribute="trailing" constant="238" id="l8l-lq-WBO"/>
+                            <constraint firstItem="Jzj-re-0cC" firstAttribute="leading" secondItem="pV7-HZ-XwD" secondAttribute="leading" constant="51" id="mZ3-Cj-5EA"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hll-Xt-IGD" secondAttribute="bottom" constant="188" id="r5w-OH-ArW"/>
+                            <constraint firstAttribute="trailing" secondItem="49a-ON-nIG" secondAttribute="trailing" constant="-267" id="wOd-md-AKe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pV7-HZ-XwD"/>
                     </view>
@@ -158,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-hW-ERL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722.9868228404099" y="144.7265625"/>
+            <point key="canvasLocation" x="721.875" y="142.02898550724638"/>
         </scene>
         <!--My Graffiti View Controller-->
         <scene sceneID="Ftp-rM-lZX">
